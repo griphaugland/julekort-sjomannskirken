@@ -1,35 +1,6 @@
 import React from "react";
-
-interface OrnamentProps {
-  color: string;
-  top: string;
-  left?: string;
-  content: string;
-}
-
-const Ornament = ({ color, top, left, content }: OrnamentProps) => {
-  return (
-    <button
-      className="absolute w-14 h-14 rounded-full overflow-hidden shadow-lg"
-      style={{
-        background: `radial-gradient(circle at 35% 35%, white 0%, ${color} 30%, ${color} 40%)`,
-        top: top,
-        left: left,
-      }}
-    >
-      <div
-        className="absolute inset-0 bg-white/20 rounded-full"
-        style={{
-          clipPath: "ellipse(70% 40% at 65% 30%)",
-        }}
-      />
-      <div className="absolute w-3 h-3 bg-gray-300 rounded-full left-1/2 -top-1.5 transform -translate-x-1/2 shadow-inner" />
-      <span className="relative z-10 text-white/80 font-semibold text-xs">
-        {content}
-      </span>
-    </button>
-  );
-};
+import Ornament from "./Ornament";
+import Star from "./Star";
 
 interface TinselStrandProps {
   top: string;
@@ -167,71 +138,93 @@ const ChristmasTree = () => {
           </div>
           <div className="hidden lg:block absolute inset-0">
             <Ornament
-              color="#ff5c5c"
+              darkText={true}
+              color="#5ba1eb"
               top="120px"
-              left="200px"
+              left="190px"
               content="Frank"
             />
             <Ornament
-              color="#5cffa0"
-              top="220px"
-              left="100px"
+              darkText={true}
+              color="#f06060"
+              top="230px"
+              left="120px"
               content="Annette"
             />
             <Ornament
-              color="#b45cff"
-              top="280px"
-              left="300px"
+              darkText={true}
+              color="#ebcd5b"
+              top="320px"
+              left="220px"
               content="Jan S"
             />
             <Ornament
-              color="#ffb45c"
-              top="380px"
-              left="150px"
+              darkText={true}
+              color="#5ba1eb"
+              top="390px"
+              left="110px"
               content="Arnstein"
             />
             <Ornament
-              color="#ffffff"
-              top="440px"
-              left="250px"
+              darkText={true}
+              color="#ebcd5b"
+              top="490px"
+              left="40px"
               content="Åshild"
             />
             <Ornament
-              color="#5cffa0"
-              top="500px"
-              left="180px"
+              darkText={true}
+              color="#f06060"
+              top="520px"
+              left="240px"
               content="Frode"
             />
           </div>
 
           {/* Mobile ornaments */}
           <div className="lg:hidden absolute inset-0">
-            <Ornament color="#ff5c5c" top="80px" left="140px" content="Frank" />
+            <Ornament
+              darkText={true}
+              color="#5ba1eb"
+              top="80px"
+              left="140px"
+              content="Frank"
+            />
             <Ornament
               top="170px"
               left="80px"
               content="Annette"
-              color="#5cffa0"
+              darkText={true}
+              color="#ebcd5b"
             />
             <Ornament
-              color="#b45cff"
+              darkText={true}
+              color="#f06060"
               top="210px"
               left="180px"
               content="Jan S"
             />
             <Ornament
-              color="#ffb45c"
+              darkText={true}
+              color="#5ba1eb"
               top="280px"
               left="60px"
               content="Arnstein"
             />
             <Ornament
-              color="#5c9fff"
+              darkText={true}
+              color="#ebcd5b"
               top="320px"
               left="190px"
               content="Åshild"
             />
-            <Ornament color="#5cffa0" top="380px" left="90px" content="Frode" />
+            <Ornament
+              darkText={true}
+              color="#f06060"
+              top="380px"
+              left="90px"
+              content="Frode"
+            />
           </div>
 
           {/* Tree stump */}
@@ -260,28 +253,7 @@ const ChristmasTree = () => {
           </div>
 
           {/* Star */}
-          <div className="absolute -top-10 left-1/2 transform -translate-x-1/2">
-            <button
-              className="w-24 h-24 relative overflow-hidden"
-              style={{
-                background: "linear-gradient(45deg, #ffd700, #fff6a6)",
-                clipPath:
-                  "polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)",
-                filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.2))",
-              }}
-            >
-              <div
-                className="absolute inset-0 bg-white/40"
-                style={{
-                  clipPath: "polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%)",
-                  transform: "translateY(-50%)",
-                }}
-              />
-              <span className="relative z-10 text-xs text-yellow-900 hidden">
-                Åshild
-              </span>
-            </button>
-          </div>
+          <Star />
         </div>
       </div>
     </div>
