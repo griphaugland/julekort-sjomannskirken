@@ -1,53 +1,24 @@
-import React from "react";
-import Ornament from "./Ornament";
+"use client";
+import React, { useState } from "react";
+import { Ornament, OrnamentDialog } from "./Ornament";
 import Star from "./Star";
-
-interface TinselStrandProps {
-  top: string;
-  reverse?: boolean;
-}
-
-const TinselStrand = ({ top, reverse = false }: TinselStrandProps) => (
-  <div className="absolute w-full" style={{ top }}>
-    <svg className="w-full h-8" preserveAspectRatio="none" viewBox="0 0 100 20">
-      <path
-        d={
-          reverse
-            ? "M0 10 Q 25 20, 50 10 Q 75 0, 100 10"
-            : "M0 10 Q 25 0, 50 10 Q 75 20, 100 10"
-        }
-        fill="none"
-        stroke="url(#tinselGradient)"
-        strokeWidth="4"
-        className="opacity-70"
-      />
-      <defs>
-        <linearGradient id="tinselGradient" x1="0" y1="0" x2="100%" y2="0">
-          <stop offset="0%" stopColor="#ffffff" />
-          <stop offset="25%" stopColor="#ffd700" />
-          <stop offset="50%" stopColor="#ffffff" />
-          <stop offset="75%" stopColor="#ffd700" />
-          <stop offset="100%" stopColor="#ffffff" />
-        </linearGradient>
-      </defs>
-    </svg>
-    {/* Sparkle effects */}
-    {[...Array(5)].map((_, i) => (
-      <div
-        key={i}
-        className="absolute w-1 h-1 bg-white rounded-full animate-pulse"
-        style={{
-          left: `${i * 25}%`,
-          top: reverse ? "15px" : "5px",
-          animationDelay: `${i * 0.2}s`,
-          opacity: 0.8,
-        }}
-      />
-    ))}
-  </div>
-);
+import TinselStrand from "./TinselStrand";
 
 const ChristmasTree = () => {
+  const [selectedOrnament, setSelectedOrnament] = useState<string | null>(null);
+
+  const handleOrnamentClick = (content: string) => {
+    setSelectedOrnament(content);
+  };
+
+  const handleStarClick = () => {
+    setSelectedOrnament("Star");
+  };
+
+  const handleDialogClose = () => {
+    setSelectedOrnament(null);
+  };
+
   return (
     <div className="relative w-[350px] lg:w-[600px] lg:h-[700px] h-[450px] flex justify-center items-center">
       <div className="relative w-80 h-96 lg:h-full lg:w-96">
@@ -138,94 +109,101 @@ const ChristmasTree = () => {
           </div>
           <div className="hidden lg:block absolute inset-0">
             <Ornament
-              darkText={true}
               color="#5ba1eb"
               top="120px"
               left="190px"
               content="Frank"
+              onOrnamentClick={handleOrnamentClick}
             />
             <Ornament
-              darkText={true}
               color="#f06060"
               top="230px"
               left="120px"
               content="Annette"
+              onOrnamentClick={handleOrnamentClick}
             />
             <Ornament
-              darkText={true}
               color="#ebcd5b"
               top="320px"
               left="220px"
               content="Jan S"
+              onOrnamentClick={handleOrnamentClick}
             />
             <Ornament
-              darkText={true}
               color="#5ba1eb"
               top="390px"
               left="110px"
               content="Arnstein"
+              onOrnamentClick={handleOrnamentClick}
             />
             <Ornament
-              darkText={true}
               color="#ebcd5b"
               top="490px"
               left="40px"
               content="Åshild"
+              onOrnamentClick={handleOrnamentClick}
             />
             <Ornament
-              darkText={true}
               color="#f06060"
               top="520px"
               left="240px"
               content="Frode"
+              onOrnamentClick={handleOrnamentClick}
             />
           </div>
 
           {/* Mobile ornaments */}
           <div className="lg:hidden absolute inset-0">
             <Ornament
-              darkText={true}
               color="#5ba1eb"
               top="80px"
               left="140px"
               content="Frank"
+              onOrnamentClick={handleOrnamentClick}
             />
             <Ornament
               top="170px"
               left="80px"
               content="Annette"
-              darkText={true}
               color="#ebcd5b"
+              onOrnamentClick={handleOrnamentClick}
             />
             <Ornament
-              darkText={true}
               color="#f06060"
               top="210px"
               left="180px"
               content="Jan S"
+              onOrnamentClick={handleOrnamentClick}
             />
             <Ornament
-              darkText={true}
               color="#5ba1eb"
               top="280px"
               left="60px"
               content="Arnstein"
+              onOrnamentClick={handleOrnamentClick}
             />
             <Ornament
-              darkText={true}
               color="#ebcd5b"
               top="320px"
               left="190px"
               content="Åshild"
+              onOrnamentClick={handleOrnamentClick}
             />
             <Ornament
-              darkText={true}
               color="#f06060"
               top="380px"
               left="90px"
               content="Frode"
+              onOrnamentClick={handleOrnamentClick}
             />
           </div>
+
+          {/* Dialog */}
+          <OrnamentDialog
+            isOpen={!!selectedOrnament}
+            onClose={handleDialogClose}
+            content={selectedOrnament || ""}
+          />
 
           {/* Tree stump */}
           <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2">
@@ -253,7 +231,7 @@ const ChristmasTree = () => {
           </div>
 
           {/* Star */}
-          <Star />
+          <Star onStarClicked={handleStarClick} />
         </div>
       </div>
     </div>

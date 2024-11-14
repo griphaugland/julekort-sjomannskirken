@@ -1,7 +1,6 @@
 import ChristmasTree from "../components/ui/ChristmasTree";
 
 export default function Home() {
-  
   return (
     <div className="min-h-screen p-8 overflow-hidden">
       {/* Main container with max width and padding */}
