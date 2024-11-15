@@ -84,3 +84,17 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.ornament {
+  @apply absolute w-14 h-14 rounded-full overflow-hidden shadow-lg flex justify-center items-center transition-transform text-white;
+  @apply hover:scale-110;
+}
+
+.star {
+  @apply w-24 h-24 relative overflow-hidden transition-all duration-300 ease-in-out;
+  @apply hover:scale-110;
+}
+
+.star-glow {
+  @apply absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300;
+}

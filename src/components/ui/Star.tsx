@@ -4,11 +4,15 @@ interface StarProps {
   onStarClicked: () => void;
 }
 
-export function Star({ onStarClicked }: StarProps) {
+interface StarProps {
+  onStarClicked: () => void;
+}
+
+export default function Star({ onStarClicked }: StarProps) {
   return (
     <div className="absolute -top-10 left-1/2 transform -translate-x-1/2">
       <button
-        className="w-24 h-24 relative overflow-hidden transition-all duration-300 ease-in-out hover:scale-110 group"
+        className="star group"
         onClick={onStarClicked}
         style={{
           background: "linear-gradient(45deg, #ffd700, #fff6a6)",
@@ -23,8 +27,7 @@ export function Star({ onStarClicked }: StarProps) {
             transform: "translateY(-50%)",
           }}
         />
-        {/* Glow effect */}
-        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="star-glow">
           <div
             className="absolute inset-0"
             style={{
@@ -39,5 +42,3 @@ export function Star({ onStarClicked }: StarProps) {
     </div>
   );
 }
-
-export default Star;

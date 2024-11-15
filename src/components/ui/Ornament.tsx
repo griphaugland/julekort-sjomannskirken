@@ -101,7 +101,6 @@ export const OrnamentDialog: React.FC<{
   );
 };
 
-// Modified Ornament component
 interface OrnamentProps {
   color: string;
   top: string;
@@ -119,7 +118,7 @@ export const Ornament: React.FC<OrnamentProps> = ({
 }) => {
   return (
     <button
-      className="absolute w-14 h-14 rounded-full overflow-hidden shadow-lg flex justify-center items-center transition-transform text-white hover:scale-110 "
+      className="ornament"
       onClick={() => onOrnamentClick(content)}
       style={{
         background: `radial-gradient(circle at 35% 35%, white 0%, ${color} 30%, ${color} 40%)`,
@@ -142,5 +141,3 @@ export const Ornament: React.FC<OrnamentProps> = ({
     </button>
   );
 };
-
-export default Ornament;
