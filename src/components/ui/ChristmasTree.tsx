@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Ornament, OrnamentDialog } from "./Ornament";
 import Star from "./Star";
 import TinselStrand from "./TinselStrand";
+import ChristmasLights from "./LightStrand";
 
 const ChristmasTree = () => {
   const [selectedOrnament, setSelectedOrnament] = useState<string | null>(null);
@@ -80,6 +81,8 @@ const ChristmasTree = () => {
             <TinselStrand top="45%" reverse={true} />
             <TinselStrand top="65%" />
             <TinselStrand top="85%" reverse={true} />
+
+            <ChristmasLights />
 
             {/* Decorative waves */}
             <div className="absolute w-full h-full">

@@ -8,6 +8,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
+import Video from "@/components/ui/Video";
 
 // Define the content type for each ornament
 interface OrnamentContent {
@@ -15,6 +16,7 @@ interface OrnamentContent {
   title: string;
   description: string;
   buttonText?: string;
+  videoPath: string;
 }
 
 // Content for each ornament
@@ -22,27 +24,29 @@ const ornamentContent: Record<string, OrnamentContent> = {
   Frank: {
     name: "Frank",
     title: "Hilsen fra Frank",
-    description:
-      "Jeg er frivillig i besøkstjenesten og besøker sjøfolk på skip i Oslo havn. Det er givende å kunne bidra til at sjøfolk får en bedre hverdag når de er langt hjemmefra.",
+    videoPath: "/videos/frank.mp4",
+    description: "Frank sender julehilsner fra  Randaberg!",
     buttonText: "Lukk",
   },
   Annette: {
     name: "Annette",
+    videoPath: "/videos/annette.mp4",
     title: "Hilsen fra Annette",
-    description:
-      "Som frivillig i besøkstjenesten har jeg møtt mange flotte mennesker. Det er fint å kunne være til stede for andre og bidra til at de får en bedre dag.",
+    description: "Annette sender julehilsner fra Los Angeles!",
     buttonText: "Lukk",
   },
   "Jan S": {
     name: "Jan S",
     title: "Hilsen fra Jan S",
+    videoPath: "/videos/jan-s.mp4",
     description:
-      "Jeg har vært frivillig i mange år og synes det er meningsfullt å kunne hjelpe andre. Det er fint å kunne gi noe tilbake til samfunnet.",
+      "Jan Sv",
     buttonText: "Lukk",
   },
   Arnstein: {
     name: "Arnstein",
     title: "Hilsen fra Arnstein",
+    videoPath: "/videos/arnstein.mp4",
     description:
       "Som frivillig får jeg mulighet til å møte mennesker fra hele verden. Det er spennende å høre deres historier og erfaringer.",
     buttonText: "Lukk",
@@ -50,6 +54,7 @@ const ornamentContent: Record<string, OrnamentContent> = {
   Åshild: {
     name: "Åshild",
     title: "Hilsen fra Åshild",
+    videoPath: "/videos/ashild.mp4",
     description:
       "Det beste med å være frivillig er å se gleden i øynene til dem vi besøker. Et lite besøk kan bety så mye for noen som er langt hjemmefra.",
     buttonText: "Lukk",
@@ -57,6 +62,7 @@ const ornamentContent: Record<string, OrnamentContent> = {
   Frode: {
     name: "Frode",
     title: "Hilsen fra Frode",
+    videoPath: "/videos/frode.mp4",
     description:
       "Jeg er stolt av å være en del av besøkstjenesten. Det er givende å kunne være der for sjøfolk som trenger noen å snakke med.",
     buttonText: "Lukk",
@@ -64,6 +70,7 @@ const ornamentContent: Record<string, OrnamentContent> = {
   Star: {
     name: "Star",
     title: "Hilsen fra stjerne",
+    videoPath: "/videos/star.mp4",
     description:
       "Jeg er frivillig i besøkstjenesten og besøker sjøfolk på skip i Oslo havn. Det er givende å kunne bidra til at sjøfolk får en bedre hverdag når de er langt hjemmefra.",
     buttonText: "Lukk",
@@ -82,7 +89,7 @@ export const OrnamentDialog: React.FC<{
 
   return (
     <AlertDialog open={isOpen}>
-      <AlertDialogContent className="bg-white">
+      <AlertDialogContent className="bg-white max-w-2xl">
         <AlertDialogHeader>
           <AlertDialogTitle className="text-2xl font-bricolage">
             {dialogContent.title}
@@ -90,6 +97,7 @@ export const OrnamentDialog: React.FC<{
           <AlertDialogDescription className="text-lg">
             {dialogContent.description}
           </AlertDialogDescription>
+          <Video src={dialogContent.videoPath} />
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogAction onClick={onClose}>
