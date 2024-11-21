@@ -120,37 +120,52 @@ const ChristmasTree = () => {
             />
             <Ornament
               color="#f06060"
-              top="230px"
+              top="210px"
               left="120px"
               content="Annette"
               onOrnamentClick={handleOrnamentClick}
             />
             <Ornament
               color="#ebcd5b"
-              top="320px"
+              top="280px"
               left="220px"
               content="Jan S"
               onOrnamentClick={handleOrnamentClick}
             />
             <Ornament
               color="#5ba1eb"
-              top="390px"
-              left="110px"
+              top="340px"
+              left="90px"
               content="Arnstein"
               onOrnamentClick={handleOrnamentClick}
             />
             <Ornament
               color="#ebcd5b"
-              top="490px"
-              left="40px"
+              top="410px"
+              left="240px"
               content="Åshild"
               onOrnamentClick={handleOrnamentClick}
             />
             <Ornament
               color="#f06060"
-              top="520px"
-              left="240px"
+              top="440px"
+              left="120px"
               content="Frode"
+              onOrnamentClick={handleOrnamentClick}
+            />
+            <Ornament
+              color="#f06060"
+              top="520px"
+              left="50px"
+              content="Gudstjeneste"
+              textClassName="text-sm"
+              onOrnamentClick={handleOrnamentClick}
+            />
+            <Ornament
+              color="#f06060"
+              top="520px"
+              left="230px"
+              content="App"
               onOrnamentClick={handleOrnamentClick}
             />
           </div>
@@ -197,6 +212,20 @@ const ChristmasTree = () => {
               top="380px"
               left="90px"
               content="Frode"
+              onOrnamentClick={handleOrnamentClick}
+            />
+            <Ornament
+              color="#f06060"
+              top="380px"
+              left="90px"
+              content="Gudstjeneste"
+              onOrnamentClick={handleOrnamentClick}
+            />
+            <Ornament
+              color="#f06060"
+              top="380px"
+              left="90px"
+              content="Nødappen"
               onOrnamentClick={handleOrnamentClick}
             />
           </div>

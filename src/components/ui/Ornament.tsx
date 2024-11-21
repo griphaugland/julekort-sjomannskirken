@@ -114,6 +114,7 @@ interface OrnamentProps {
   left?: string;
   content: string;
   onOrnamentClick: (content: string) => void;
+  textClassName?: string;
 }
 
 export const Ornament: React.FC<OrnamentProps> = ({
@@ -122,6 +123,7 @@ export const Ornament: React.FC<OrnamentProps> = ({
   left,
   content,
   onOrnamentClick,
+  textClassName,
 }) => {
   return (
     <button
@@ -141,7 +143,7 @@ export const Ornament: React.FC<OrnamentProps> = ({
       />
       <div className="absolute w-3 h-3 bg-gray-300 rounded-full left-1/2 -top-1.5 transform -translate-x-1/2 shadow-inner" />
       <span
-        className={`relative z-10 font-bold text-xs text-inherit drop-shadow-[0_1.1px_1.1px_rgba(0,0,0,0.8)]`}
+        className={`relative z-10 font-bold text-xs text-inherit drop-shadow-[0_1.1px_1.1px_rgba(0,0,0,0.8)] ${textClassName}`}
       >
         {content}
       </span>
