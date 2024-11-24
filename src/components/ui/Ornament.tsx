@@ -17,6 +17,7 @@ interface OrnamentContent {
   description: string;
   buttonText?: string;
   videoPath: string;
+  customContent?: React.ReactNode;
 }
 
 // Content for each ornament
@@ -32,47 +33,70 @@ const ornamentContent: Record<string, OrnamentContent> = {
     name: "Annette",
     videoPath: "/videos/annette.mp4",
     title: "Hilsen fra Annette",
-    description: "Annette sender julehilsner fra Los Angeles!",
+    description: "Anette sender julehilsner fra Los Angeles!",
     buttonText: "Lukk",
   },
   "Jan S": {
     name: "Jan S",
     title: "Hilsen fra Jan S",
     videoPath: "/videos/jan-s.mp4",
-    description: "Jan Sv",
+    description: "",
     buttonText: "Lukk",
   },
   Arnstein: {
     name: "Arnstein",
     title: "Hilsen fra Arnstein",
     videoPath: "/videos/arnstein.mp4",
-    description:
-      "Som frivillig får jeg mulighet til å møte mennesker fra hele verden. Det er spennende å høre deres historier og erfaringer.",
+    description: "",
     buttonText: "Lukk",
   },
   Åshild: {
     name: "Åshild",
     title: "Hilsen fra Åshild",
     videoPath: "/videos/ashild.mp4",
-    description:
-      "Det beste med å være frivillig er å se gleden i øynene til dem vi besøker. Et lite besøk kan bety så mye for noen som er langt hjemmefra.",
+    description: "",
     buttonText: "Lukk",
   },
   Frode: {
     name: "Frode",
     title: "Hilsen fra Frode",
     videoPath: "/videos/frode.mp4",
-    description:
-      "Jeg er stolt av å være en del av besøkstjenesten. Det er givende å kunne være der for sjøfolk som trenger noen å snakke med.",
+    description: "",
     buttonText: "Lukk",
   },
-  Star: {
-    name: "Star",
-    title: "Hilsen fra stjerne",
-    videoPath: "/videos/star.mp4",
+  Erna: {
+    name: "Erna",
+    title: "Erna leser juleevangeliet🎄",
+    videoPath: "/videos/erna.mp4",
+    description: "",
+  },
+  Nødapp: {
+    name: "Nødapp",
+    title: "Hilsen fra Nødapp",
+    videoPath: "",
+    customContent: (
+      <div className="p-4">
+        <h1 className="text-2xl font-bricolage">Nødapp</h1>
+        <p className="text-lg">
+          Nødapp har dessverre ikke laget en julehilsen i år.
+        </p>
+      </div>
+    ),
     description:
-      "Jeg er frivillig i besøkstjenesten og besøker sjøfolk på skip i Oslo havn. Det er givende å kunne bidra til at sjøfolk får en bedre hverdag når de er langt hjemmefra.",
-    buttonText: "Lukk",
+      "Vi har spilt inn en julegudstjeneste for deg! Denne ligger på vår facebook side. Her er lenken: https://www.facebook.com/profile.php?id=100068015694171",
+  },
+  Tjeneste: {
+    name: "Gudstjeneste",
+    title: "Julegudstjeneste",
+    videoPath: "/videos/gudstjeneste.mp4",
+    customContent: (
+      <div className="p-4">
+        <h1 className="text-2xl font-bricolage">Gudstjeneste</h1>
+        <p className="text-lg"></p>
+      </div>
+    ),
+    description:
+      "Vi har spilt inn en julegudstjeneste for deg! Denne ligger på vår facebook side. Her er lenken: https://www.facebook.com/profile.php?id=100068015694171",
   },
 };
 
@@ -96,7 +120,11 @@ export const OrnamentDialog: React.FC<{
           <AlertDialogDescription className="text-lg">
             {dialogContent.description}
           </AlertDialogDescription>
-          <Video src={dialogContent.videoPath} />
+          {dialogContent.customContent ? (
+            dialogContent.customContent
+          ) : (
+            <Video src={dialogContent.videoPath} />
+          )}
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogAction onClick={onClose}>

@@ -13,7 +13,7 @@ const ChristmasTree = () => {
   };
 
   const handleStarClick = () => {
-    setSelectedOrnament("Star");
+    setSelectedOrnament("Erna");
   };
 
   const handleDialogClose = () => {
@@ -157,7 +157,7 @@ const ChristmasTree = () => {
               color="#f06060"
               top="520px"
               left="50px"
-              content="Gudstjeneste"
+              content="Tjeneste"
               textClassName="text-sm"
               onOrnamentClick={handleOrnamentClick}
             />
@@ -165,7 +165,7 @@ const ChristmasTree = () => {
               color="#f06060"
               top="520px"
               left="230px"
-              content="App"
+              content="Nødapp"
               onOrnamentClick={handleOrnamentClick}
             />
           </div>
@@ -218,14 +218,14 @@ const ChristmasTree = () => {
               color="#f06060"
               top="380px"
               left="90px"
-              content="Gudstjeneste"
+              content="Tjeneste"
               onOrnamentClick={handleOrnamentClick}
             />
             <Ornament
               color="#f06060"
               top="380px"
               left="90px"
-              content="Nødappen"
+              content="Nødapp"
               onOrnamentClick={handleOrnamentClick}
             />
           </div>

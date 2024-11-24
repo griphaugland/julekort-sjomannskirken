@@ -37,7 +37,9 @@ export default function Star({ onStarClicked }: StarProps) {
             }}
           />
         </div>
-        <span className="relative z-10 text-xs text-inherit hidden">?</span>
+        <span className="font-bold relative z-10 text-xs  text-white drop-shadow-[0_1.1px_1.1px_rgba(0,0,0,0.8)]">
+          Erna
+        </span>
       </button>
     </div>
   );
