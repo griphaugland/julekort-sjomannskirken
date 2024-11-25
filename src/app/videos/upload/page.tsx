@@ -23,7 +23,7 @@ export default function VideoUploadPage() {
 
           const newBlob = await upload(file.name, file, {
             access: "public",
-            handleUploadUrl: "/api/videos/upload",
+            handleUploadUrl: "/api/upload",
           });
 
           setBlob(newBlob);
