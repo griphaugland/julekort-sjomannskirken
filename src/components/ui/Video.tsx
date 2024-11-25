@@ -10,7 +10,7 @@ const Video: React.FC<VideoProps> = ({ src }) => {
   useEffect(() => {
     setTimeout(() => {
       setPlaying(true);
-    }, 1000);
+    }, 300);
   }, []);
   return (
     <div className="relative pt-[56.25%] bg-gray-100 rounded-lg overflow-hidden">

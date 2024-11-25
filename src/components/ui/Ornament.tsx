@@ -9,6 +9,10 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 import Video from "@/components/ui/Video";
+import Facebook from "@/app/media/Facebook";
+import Appstore from "@/app/media/Appstore";
+import Android from "@/app/media/Android";
+import Link from "next/link";
 
 // Define the content type for each ornament
 interface OrnamentContent {
@@ -47,7 +51,7 @@ const ornamentContent: Record<string, OrnamentContent> = {
     name: "Arnstein",
     title: "Hilsen fra Arnstein",
     videoPath: "/videos/arnstein.mp4",
-    description: "",
+    description: "Varme hilser fra Aberdeen!",
     buttonText: "Lukk",
   },
   Åshild: {
@@ -61,7 +65,7 @@ const ornamentContent: Record<string, OrnamentContent> = {
     name: "Frode",
     title: "Hilsen fra Frode",
     videoPath: "/videos/frode.mp4",
-    description: "",
+    description: "Julehilsner fra Rotterdam!",
     buttonText: "Lukk",
   },
   Erna: {
@@ -72,31 +76,72 @@ const ornamentContent: Record<string, OrnamentContent> = {
   },
   Nødapp: {
     name: "Nødapp",
-    title: "Hilsen fra Nødapp",
+    title: "Last ned Nødnummer-appen på din mobil",
+    description: "",
     videoPath: "",
     customContent: (
-      <div className="p-4">
-        <h1 className="text-2xl font-bricolage">Nødapp</h1>
-        <p className="text-lg">
-          Nødapp har dessverre ikke laget en julehilsen i år.
-        </p>
+      <div className="pb-4 flex gap-4 text-muted-foreground text-lg flex-col">
+        <div>
+          Sjømannskirkens nødnummer-app hjelper deg å finne nødnummeret i landet
+          du er i.{" "}
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline text-blue-500 text-md"
+            href="https://www.sjomannskirken.no/nodnummer/"
+          >
+            Les mer om appen her.
+          </Link>
+        </div>
+
+        <div className="pt-4 flex gap-4 flex-row justify-between items-center">
+          <Link
+            className="flex gap-6 items-center hover:underline text-lg w-full"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://itunes.apple.com/no/app/n-dnummer/id688801563?ls=1&mt=8"
+          >
+            <div className="h-12 w-12">
+              <Appstore />
+            </div>
+            <span> Last ned til iPhone</span>
+          </Link>
+          <Link
+            className=" flex gap-6  items-center hover:underline text-lg w-full"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://play.google.com/store/apps/details?id=no.deepmind.SjomannskirkenBeredskap&hl=no"
+          >
+            <div className="h-12 w-12">
+              <Android />
+            </div>
+            <span>Last ned til Android</span>
+          </Link>
+        </div>
       </div>
     ),
-    description:
-      "Vi har spilt inn en julegudstjeneste for deg! Denne ligger på vår facebook side. Her er lenken: https://www.facebook.com/profile.php?id=100068015694171",
   },
   Tjeneste: {
     name: "Gudstjeneste",
     title: "Julegudstjeneste",
     videoPath: "/videos/gudstjeneste.mp4",
     customContent: (
-      <div className="p-4">
-        <h1 className="text-2xl font-bricolage">Gudstjeneste</h1>
-        <p className="text-lg"></p>
-      </div>
+      <Link
+        className="p-4 flex gap-4 items-center hover:underline"
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.facebook.com/profile.php?id=100068015694171"
+      >
+        <p className="text-lg h-10 w-10">
+          <Facebook />
+        </p>
+        <p className="text-lg text-muted-foreground">
+          Se julegudstjenesten på Facebook
+        </p>
+      </Link>
     ),
     description:
-      "Vi har spilt inn en julegudstjeneste for deg! Denne ligger på vår facebook side. Her er lenken: https://www.facebook.com/profile.php?id=100068015694171",
+      "Vi har spilt inn en julegudstjeneste som ligger ut på vår Facebook side. Trykk på ikonet under for å komme til facebook siden vår!",
   },
 };
 

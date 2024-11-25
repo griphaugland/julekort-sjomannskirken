@@ -14,7 +14,9 @@ export default function Home() {
             <h1 className="text-4xl md:text-5xl xl:text-7xl 2xl:text-6xl font-bricolage mb-8">
               Julekort fra Sjømannskirkens Besøkstjeneste
             </h1>
-            <p className="text-xl">Trykk på en kule!</p>
+            <p className="text-sm md:text-xl xl:text-md 2xl:text-lg">
+              Vi ønsker deg en riktig god jul og et godt nytt år!
+            </p>
           </div>
           {/* Tree container - centered on mobile, right on desktop */}
           <div className="flex justify-center lg:justify-end lg:pt-12 order-2 lg:order-2">

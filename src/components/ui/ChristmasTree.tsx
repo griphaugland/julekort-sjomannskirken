@@ -119,14 +119,14 @@ const ChristmasTree = () => {
               onOrnamentClick={handleOrnamentClick}
             />
             <Ornament
-              color="#f06060"
+              color="#ebcd5b"
               top="210px"
               left="120px"
               content="Annette"
               onOrnamentClick={handleOrnamentClick}
             />
             <Ornament
-              color="#ebcd5b"
+              color="#f06060"
               top="280px"
               left="220px"
               content="Jan S"
@@ -154,7 +154,7 @@ const ChristmasTree = () => {
               onOrnamentClick={handleOrnamentClick}
             />
             <Ornament
-              color="#f06060"
+              color="#ebcd5b"
               top="520px"
               left="50px"
               content="Tjeneste"
@@ -162,7 +162,7 @@ const ChristmasTree = () => {
               onOrnamentClick={handleOrnamentClick}
             />
             <Ornament
-              color="#f06060"
+              color="#5ba1eb"
               top="520px"
               left="230px"
               content="Nødapp"
@@ -174,57 +174,57 @@ const ChristmasTree = () => {
           <div className="lg:hidden absolute inset-0">
             <Ornament
               color="#5ba1eb"
-              top="80px"
-              left="140px"
+              top="70px"
+              left="150px"
               content="Frank"
               onOrnamentClick={handleOrnamentClick}
             />
             <Ornament
-              top="170px"
-              left="80px"
+              top="150px"
+              left="85px"
               content="Annette"
               color="#ebcd5b"
               onOrnamentClick={handleOrnamentClick}
             />
             <Ornament
               color="#f06060"
-              top="210px"
-              left="180px"
+              top="190px"
+              left="170px"
               content="Jan S"
               onOrnamentClick={handleOrnamentClick}
             />
             <Ornament
               color="#5ba1eb"
-              top="280px"
+              top="260px"
               left="60px"
               content="Arnstein"
               onOrnamentClick={handleOrnamentClick}
             />
             <Ornament
               color="#ebcd5b"
-              top="320px"
+              top="280px"
               left="190px"
               content="Åshild"
               onOrnamentClick={handleOrnamentClick}
             />
             <Ornament
               color="#f06060"
-              top="380px"
-              left="90px"
+              top="330px"
+              left="120px"
               content="Frode"
               onOrnamentClick={handleOrnamentClick}
             />
             <Ornament
-              color="#f06060"
-              top="380px"
-              left="90px"
+              color="#ebcd5b"
+              top="370px"
+              left="30px"
               content="Tjeneste"
               onOrnamentClick={handleOrnamentClick}
             />
             <Ornament
-              color="#f06060"
+              color="#5ba1eb"
               top="380px"
-              left="90px"
+              left="220px"
               content="Nødapp"
               onOrnamentClick={handleOrnamentClick}
             />
