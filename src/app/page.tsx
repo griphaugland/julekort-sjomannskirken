@@ -11,11 +11,11 @@ export default function Home() {
           {/* Text content - centered on mobile, left on desktop */}
           <div className="text-left lg:text-left order-1 lg:order-1">
             <Logo />
-            <h1 className="text-4xl md:text-5xl xl:text-7xl 2xl:text-6xl font-bricolage mb-8">
+            <h1 className=" text-4xl sm:text-4xl font-bold md:text-4xl xl:text-6xl text-[#103a61] 2xl:text-5xl font-bricolage mb-6">
               Julekort fra Sjømannskirkens Besøkstjeneste
             </h1>
-            <p className="text-sm md:text-xl xl:text-md 2xl:text-lg">
-              Vi ønsker deg en riktig god jul og et godt nytt år!
+            <p className="text-md md:text-md xl:text-2xl font-medium text-blueColor 2xl:text-2x">
+              Vi ønsker deg en riktig GOD JUL og GODT NYTTÅR!
             </p>
           </div>
           {/* Tree container - centered on mobile, right on desktop */}

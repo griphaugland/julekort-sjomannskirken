@@ -17,7 +17,7 @@ function Logo() {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       x="0px"
       y="0px"
-      width={`${mobile ? 250 : 400}px`}
+      width={`${mobile ? 300 : 400}px`}
       height={`${mobile ? 80 : 100}px`}
       viewBox="0 0 1250.835 139.416"
       enableBackground="new 0 0 1250.835 139.416"

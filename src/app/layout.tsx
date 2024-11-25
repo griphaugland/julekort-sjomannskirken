@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Inter, Bricolage_Grotesque } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 
 // If loading a variable font, you don't need to specify the font weight
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-});
 
-const bricolage = Bricolage_Grotesque({
+const dmSans = DM_Sans({
   subsets: ["latin"],
   display: "swap",
 });
@@ -27,11 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Analytics />
-      <body
-        className={` ${inter.className} ${bricolage.className} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={` ${dmSans.className} antialiased`}>{children}</body>
     </html>
   );
 }
