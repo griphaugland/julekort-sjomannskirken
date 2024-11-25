@@ -35,7 +35,8 @@ const ornamentContent: Record<string, OrnamentContent> = {
   },
   Annette: {
     name: "Annette",
-    videoPath: "/videos/annette.mp4",
+    videoPath:
+      "https://gkkwzhnh4oujq0by.public.blob.vercel-storage.com/annette-P2yvljAeKHUZnhjVC4LeLg02BnFebi.mp4",
     title: "Hilsen fra Annette",
     description: "Anette sender julehilsner fra Los Angeles!",
     buttonText: "Lukk",
@@ -50,28 +51,32 @@ const ornamentContent: Record<string, OrnamentContent> = {
   Arnstein: {
     name: "Arnstein",
     title: "Hilsen fra Arnstein",
-    videoPath: "/videos/arnstein.mp4",
+    videoPath:
+      "https://gkkwzhnh4oujq0by.public.blob.vercel-storage.com/arnstein-hzbAZOkRFEmgt3oxZJAdOwLu0VxZA1.MP4",
     description: "Varme hilser fra Aberdeen!",
     buttonText: "Lukk",
   },
   Åshild: {
     name: "Åshild",
     title: "Hilsen fra Åshild",
-    videoPath: "/videos/ashild.mp4",
+    videoPath:
+      "https://gkkwzhnh4oujq0by.public.blob.vercel-storage.com/ashild-LUQXy3mhMzzShL46uRZbx5ayyWLCAr.MP4",
     description: "",
     buttonText: "Lukk",
   },
   Frode: {
     name: "Frode",
     title: "Hilsen fra Frode",
-    videoPath: "/videos/frode.mp4",
+    videoPath:
+      "https://gkkwzhnh4oujq0by.public.blob.vercel-storage.com/frode-w65IT3Nm5AspGxlsfv1VeuXZRqWgjr.MP4",
     description: "Julehilsner fra Rotterdam!",
     buttonText: "Lukk",
   },
   Erna: {
     name: "Erna",
     title: "Erna leser juleevangeliet🎄",
-    videoPath: "/videos/erna.mp4",
+    videoPath:
+      "https://gkkwzhnh4oujq0by.public.blob.vercel-storage.com/erna-lLqZRDiQrgFaGXRXVaGhw777FNEMBp.MP4",
     description: "",
   },
   Nødapp: {
