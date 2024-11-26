@@ -11,8 +11,8 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Julekort 2024",
-  description: "Julekort Sjømannskirkens Besøkstjeneste",
+  title: "Sjømannskirkens Besøkstjeneste",
+  description: "Julekort fra Sjømannskirkens Besøkstjeneste",
 };
 
 export default function RootLayout({
