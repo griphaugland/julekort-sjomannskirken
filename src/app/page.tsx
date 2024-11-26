@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="h-full min-h-screen max-h-screen sm:p-8 overflow-hidden">
       {/* Main container with max width and padding */}
-      <div className="max-w-7xl h-full sm:min-h-auto mx-auto px-4 sm:py-8">
+      <div className="max-w-7xl min-h-screen max-h-screen mx-auto px-4 sm:py-8">
         {/* Grid container */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center">
           {/* Text content - centered on mobile, left on desktop */}
