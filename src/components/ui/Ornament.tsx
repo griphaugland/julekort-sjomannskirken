@@ -28,10 +28,10 @@ interface OrnamentContent {
 const ornamentContent: Record<string, OrnamentContent> = {
   Frank: {
     name: "Frank",
-    title: "Hilsen fra Frank",
+    title: "Frank sender julehilsen fra Oslo sentralstasjon! 🚂",
     videoPath:
       "https://gkkwzhnh4oujq0by.public.blob.vercel-storage.com/frank-sD3sBuygAKr4mjeeLtDggFBL6blqnO.MP4",
-    description: "Frank sender julehilsen fra Oslo sentralstasjon!",
+    description: "",
     buttonText: "Lukk",
   },
   Annette: {
