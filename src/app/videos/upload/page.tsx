@@ -1,4 +1,8 @@
-"use client";
+/* "use client";
+
+
+
+COMMENTED OUT AS UPLOAD FUNCIOANLITY IS NOT REQUIRED
 
 import { type PutBlobResult } from "@vercel/blob";
 import { upload } from "@vercel/blob/client";
@@ -40,3 +44,4 @@ export default function VideoUploadPage() {
     </>
   );
 }
+ */

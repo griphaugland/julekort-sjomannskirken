@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Ornament, OrnamentDialog } from "./Ornament";
 import Star from "./Star";
 import TinselStrand from "./TinselStrand";
@@ -7,9 +7,25 @@ import ChristmasLights from "./LightStrand";
 
 const ChristmasTree = () => {
   const [selectedOrnament, setSelectedOrnament] = useState<string | null>(null);
+  const [firstOrnamentclick, setFirstOrnamentclick] = useState<boolean>(true);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setSelectedOrnament(null);
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [selectedOrnament]);
 
   const handleOrnamentClick = (content: string) => {
     setSelectedOrnament(content);
+    setFirstOrnamentclick(false);
   };
 
   const handleStarClick = () => {
@@ -266,6 +282,11 @@ const ChristmasTree = () => {
           <Star onStarClicked={handleStarClick} />
         </div>
       </div>
+      {firstOrnamentclick && (
+        <p className="text-lg text-blueColor animate-bounce absolute -bottom-32 md:bottom-0">
+          Trykk på en kule!
+        </p>
+      )}
     </div>
   );
 };

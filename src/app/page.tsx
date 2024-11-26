@@ -19,7 +19,7 @@ export default function Home() {
             </p>
           </div>
           {/* Tree container - centered on mobile, right on desktop */}
-          <div className="flex justify-center lg:justify-end lg:pt-12 order-2 lg:order-2">
+          <div className="flex justify-center items-center flex-col relative lg:justify-end lg:pt-12 order-2 lg:order-2">
             <ChristmasTree />
           </div>
         </div>
