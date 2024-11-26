@@ -1,8 +1,4 @@
-/* "use client";
-
-
-
-COMMENTED OUT AS UPLOAD FUNCIOANLITY IS NOT REQUIRED
+"use client";
 
 import { type PutBlobResult } from "@vercel/blob";
 import { upload } from "@vercel/blob/client";
@@ -34,7 +30,10 @@ export default function VideoUploadPage() {
         }}
       >
         <input name="file" ref={inputFileRef} type="file" required />
-        <button type="submit">Upload</button>
+        <p>Currently disabled</p>
+        <button disabled type="submit">
+          Upload
+        </button>
       </form>
       {blob && (
         <div>
@@ -44,4 +43,3 @@ export default function VideoUploadPage() {
     </>
   );
 }
- */
