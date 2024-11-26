@@ -38,7 +38,7 @@ const ChristmasTree = () => {
 
   return (
     <div className="relative w-[350px] lg:w-[600px] lg:h-[700px] h-[450px] flex justify-center items-center">
-      <div className="relative w-80 h-96 lg:h-full lg:w-96">
+      <div className="relative w-80 lg:h-full lg:w-96">
         {/* Tree Shadow */}
         <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-72 h-8 bg-black/20 blur-xl rounded-full" />
 

@@ -3,9 +3,9 @@ import Logo from "./media/Logo";
 
 export default function Home() {
   return (
-    <div className="h-full min-h-screen max-h-screen sm:p-8 overflow-hidden">
+    <div className="h-full min-h-screen sm:p-8 overflow-hidden">
       {/* Main container with max width and padding */}
-      <div className="max-w-7xl min-h-screen max-h-screen mx-auto px-4 sm:py-8">
+      <div className="max-w-7xl min-h-screen mx-auto px-4 sm:py-8">
         {/* Grid container */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center">
           {/* Text content - centered on mobile, left on desktop */}
@@ -19,7 +19,7 @@ export default function Home() {
             </p>
           </div>
           {/* Tree container - centered on mobile, right on desktop */}
-          <div className="flex justify-center items-center flex-col relative lg:justify-end lg:pt-12 order-2 lg:order-2">
+          <div className="flex justify-center items-center flex-col relative mb-4 lg:justify-end lg:pt-12 order-2 lg:order-2">
             <ChristmasTree />
           </div>
         </div>
