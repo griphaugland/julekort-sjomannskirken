@@ -23,7 +23,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Analytics />
-      <body className={` ${dmSans.className} antialiased`}>{children}</body>
+      <body className={`min-h-screen ${dmSans.className} antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }
